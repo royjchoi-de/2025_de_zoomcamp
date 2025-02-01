@@ -21,9 +21,9 @@ Complete the Quiz shown below. It’s a set of 6 multiple-choice questions to te
 - 364.7 MB
 - 692.6 MB
 
-# I checked the extract sectinon on the Kestra Execution tab for Extract but didn't find the file size anywhere there. Had to search for file 'yellow_tripdata_2020-12.csv' on GCS and look in details
+I checked the extract section on on the Kestra Execution tab for Extract but didn't find the file size anywhere there. Had to search for file 'yellow_tripdata_2020-12.csv' on GCS and look in details
 
-ANSWER: 128.3 MB
+#ANSWER: 128.3 MB
 
 2) What is the rendered value of the variable `file` when the inputs `taxi` is set to `green`, `year` is set to `2020`, and `month` is set to `04` during execution?
 - `{{inputs.taxi}}_tripdata_{{inputs.year}}-{{inputs.month}}.csv` 
@@ -38,7 +38,7 @@ variables:
   table: "public.{{inputs.taxi}}_tripdata"
   data: "{{outputs.extract.outputFiles[inputs.taxi ~ '_tripdata_' ~ (trigger.date | date('yyyy-MM')) ~ '.csv']}}"
 
-ANSWER: green_tripdata_2020-04.csv
+#ANSWER: green_tripdata_2020-04.csv
 
 3) How many rows are there for the `Yellow` Taxi data for all CSV files in the year 2020?
 - 13,537.299
@@ -51,7 +51,7 @@ FROM kestra-my-project-32628.de_zoomcamp.yellow_tripdata
 WHERE tpep_pickup_datetime >= '2020-01-01 00:00:01'
   AND tpep_dropoff_datetime <= '2020-12-31 23:59:59';
 
-ANSWER: 246478499
+#ANSWER: 246478499
 
 4) How many rows are there for the `Green` Taxi data for all CSV files in the year 2020?
 - 5,327,301
@@ -64,8 +64,8 @@ FROM kestra-my-project-32628.de_zoomcamp.green_tripdata
 WHERE lpep_pickup_datetime >= '2020-01-01 00:00:01'
   AND lpep_dropoff_datetime <= '2020-12-31 23:59:59';
 
-ANSWER: 1,734,027 -- (missing 24 trips if the answer is 1734051)
-ANSWER: 1,734,051
+#ANSWER: 1,734,027 -- (missing 24 trips if the answer is 1734051)
+#ANSWER: 1,734,051
 
 5) How many rows are there for the `Yellow` Taxi data for the March 2021 CSV file?
 - 1,428,092
@@ -75,7 +75,7 @@ ANSWER: 1,734,051
 
 'yellow_tripdata_2021_03' has 1925152 rows
 
-ANSWER: 1,925,152
+#ANSWER: 1,925,152
 
 6) How would you configure the timezone to New York in a Schedule trigger?
 - Add a `timezone` property set to `EST` in the `Schedule` trigger configuration  
@@ -83,7 +83,7 @@ ANSWER: 1,925,152
 - Add a `timezone` property set to `UTC-5` in the `Schedule` trigger configuration
 - Add a `location` property set to `New_York` in the `Schedule` trigger configuration  
 
-ANSWER" Add a `timezone` property set to `America/New_York` in the `Schedule` trigger configuration
+#ANSWER" Add a `timezone` property set to `America/New_York` in the `Schedule` trigger configuration
 
 ## Submitting the solutions
 
